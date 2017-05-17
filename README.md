@@ -1,6 +1,6 @@
 # Sof.JCDecaux.Vls
 
-Access JCDecaux VLS bike sharing realtime data API.
+Access JCDecaux VLS bike sharing realtime data API. Available as a nuget package Sof.JCDecaux.Vls.
 
 ## VlsClient
 
