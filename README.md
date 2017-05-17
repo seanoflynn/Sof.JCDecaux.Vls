@@ -13,11 +13,11 @@ A contract refers to each city or group of cities that JCDecaux has a contract f
 ```csharp
 public class VlsContract
 {
-  public string Name { get; set; }
-  public string CommercialName { get; set; }
-  public string CountryCode { get; set; }
+    public string Name { get; set; }
+    public string CommercialName { get; set; }
+    public string CountryCode { get; set; }
 
-  public List<string> Cities { get; set; }
+    public List<string> Cities { get; set; }
 }
 ```
 
@@ -25,23 +25,23 @@ A station is an individual bike station.
 
 ```csharp
 public class VlsStation
-	{
-		public string ContractName { get; set; }
-		public int Number { get; set; }
+{
+    public string ContractName { get; set; }
+    public int Number { get; set; }
 
-		public string Name { get; set; }
-		public string Address { get; set; }
-		public bool Banking { get; set; }
-		public bool Bonus { get; set; }
+    public string Name { get; set; }
+    public string Address { get; set; }
+    public bool Banking { get; set; }
+    public bool Bonus { get; set; }
     public VlsStationState Status { get; set; } // StationState.Open or StationState.Closed
     public VlsStationPosition Position { get; set; } // contains Latitude and Longtitude
 
-		public int BikeStands { get; set; }
-		public int AvailableBikeStands { get; set; }
-		public int AvailableBikes { get; set; }
+    public int BikeStands { get; set; }
+    public int AvailableBikeStands { get; set; }
+    public int AvailableBikes { get; set; }
 
-		public DateTime LastUpdate { get; set; }
-	}
+    public DateTime LastUpdate { get; set; }
+}
 ```
 
 Below are some examples.
@@ -53,30 +53,30 @@ using System.Threading.Tasks;
 
 namespace Sof.JCDecaux.Vls.Examples
 {
-	public class Program
-	{
-		public static void Main()
-		{
-			Examples().Wait();
-		}
+    public class Program
+    {
+        public static void Main()
+        {
+            Examples().Wait();
+        }
 
-		public static async Task Examples()
-		{
-			var client = new VlsClient("{your api key here}");
+        public static async Task Examples()
+        {
+            var client = new VlsClient("{your api key here}");
 
-			// retrieve a list of contracts
-			List<VlsContract> contracts = await client.GetContracts();
+            // retrieve a list of contracts
+            List<VlsContract> contracts = await client.GetContracts();
 
-			// retrieve a list of all stations (from all contracts)
-			List<VlsStation> stations = await client.GetStations();
+            // retrieve a list of all stations (from all contracts)
+            List<VlsStation> stations = await client.GetStations();
 
-			// retrieve a list of all stations for a specific contract
-			List<VlsStation> stationsInDublin = await client.GetStations("Dublin");
+            // retrieve a list of all stations for a specific contract
+            List<VlsStation> stationsInDublin = await client.GetStations("Dublin");
 
-			// retrieve a single station
-			VlsStation station = await client.GetStation("Dublin", 18);
-		}
-	}
+            // retrieve a single station
+            VlsStation station = await client.GetStation("Dublin", 18);
+        }
+    }
 }
 ```
 
