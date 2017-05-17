@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>Sof.JCDecaux.Vls</id>
+        <version>1.0.0</version>
+        <title>Sof.JCDecaux.Vls</title>
+        <authors>seanoflynn</authors>
+        <owners>seanoflynn</owners>
+        <licenseUrl>https://raw.githubusercontent.com/cheatdeath/Sof.JCDecaux.Vls/master/LICENSE.txt</licenseUrl>
+        <projectUrl>https://github.com/cheatdeath/Sof.JCDecaux.Vls</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Bindings for JCDecaux .</description>
+        <releaseNotes>Initial release of the package.</releaseNotes>
+        <copyright>Copyright 2017</copyright>
+        <tags>jcdecaux vls bike share sharing api cyclic velib velo veloh dublinbikes valenbisi cyclocity goteborg tusbic lundahoj velam velocite bysykkel velov bicikelj sevici velostanlib li-bia-velo cristolib velo2 villo velik le-velo bicloo citycycle velocite</tags>
+        <dependencies>
+            <dependency id="Newtonsoft.Json" version="10.0.2"/>
+        </dependencies>
+    </metadata>
+    <files>
+        
+        <file src="../src/Sof.JCDecaux.Vls/bin/Release/netstandard1.4/Sof.JCDecaux.Vls.dll" target="lib/netstandard1.4/Sof.JCDecaux.Vls.dll"/>  
+    </files>
+</package>
